@@ -13,7 +13,6 @@
 #include <cmath>
 #include "image.h"
 #include <omp.h>
-
 using namespace std;
 ///home/giovanny/Digitales/tarea_digitales/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/
 int main (){
@@ -22,7 +21,7 @@ int main (){
     string cadena="/home/giovanny/Digitales/tarea_digitales/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/lena.pgm";
     char *in_path = strdup(cadena.c_str());
     int bandera = Imagen_in.fromFile(in_path);
-    int threads =4;
+    int threads =1;
 
      if(bandera==-1){
          cout<<"Error en la escritura de la imagen\n";
@@ -61,21 +60,20 @@ int main (){
      cout<<b<<endl;
    
 
-         for(int i=0;i<Imagen_in.height;i++){
 
+         for(int i=0;i<Imagen_in.height;i++){
 
             for(int j=0;j<Imagen_in.width;j++){
 
                  x=i-1;
                  y=j-1;
 
-                
-                 int k;
-                 #pragma omp parallel for reduction (+:threads) //num_threads(threads)  }
-                 for(k=0;k<tamano;k++){                    
+                 //int k;
+                 #pragma omp parallel for num_threads(threads) //reduction (+: threads)
+                 for(int k=0;k<tamano;k++){                    
                         
                             //int l;
-                            //#pragma omp parallel for reduction (+:threads)
+                            //#pragma omp parallel for num_threads(threads) //reduction (+:threads)//  // reduction (+:threads)
                             for(int l=0;l<tamano;l++){
                             nx=x+k;
                             ny=y+l; 
