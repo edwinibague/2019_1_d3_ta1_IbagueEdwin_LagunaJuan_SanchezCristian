@@ -16,24 +16,24 @@
 #include <omp.h>
 
 using namespace std;
-
+//home/giovanny/Digitales/tarea_digitales/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/
 int main (){
                                                                                                                        
     string name;
     cout<<"Ingrese el nombre de la imagen que desea filtrar: ";
     cin >> name;
     Image Imagen_in;
-    string cadena="/home/giovanny/Digitales/tarea_digitales/"+name+".pgm";
+    string cadena="/home/giovanny/Digitales/tarea_digitales/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/"+name+".pgm";
     char *in_path = strdup(cadena.c_str());
     int bandera = Imagen_in.fromFile(in_path);
-    int threads = 2;
+    int threads = 16;
 
      if(bandera==-1){
          cout<<"Error en la escritura de la imagen\n";
          exit(1);
     }
 
-     string cadena2="/home/giovanny/Digitales/tarea_digitales/"+name+"_filtrada.pgm";
+     string cadena2="/home/giovanny/Digitales/tarea_digitales/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/"+name+"_filtrada.pgm";
      char *out_path= strdup(cadena2.c_str());
      Image Imagen_filtrada;
      Imagen_filtrada=Image(Imagen_in.width,Imagen_in.height);
