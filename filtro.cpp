@@ -18,21 +18,18 @@ using namespace std;
 ///home/giovanny/Digitales/tarea_digitales/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/
 int main (){
                                                                                                                        
-    string name;
-    cout<<"Ingrese el nombre de la imagen que desea filtrar: ";
-    cin >> name;
     Image Imagen_in;
-    string cadena="/home/giovanny/Digitales/tarea_digitales/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/"+name+".pgm";
+    string cadena="/home/giovanny/Digitales/tarea_digitales/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/Face.pgm";
     char *in_path = strdup(cadena.c_str());
     int bandera = Imagen_in.fromFile(in_path);
-    int threads = 1;
+    int threads =4;
 
      if(bandera==-1){
          cout<<"Error en la escritura de la imagen\n";
          exit(1);
     }
 
-     string cadena2="/home/giovanny/Digitales/tarea_digitales/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/"+name+"_filtrada.pgm";
+     string cadena2="/home/giovanny/Digitales/tarea_digitales/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/Face_filtrada.pgm";
      char *out_path= strdup(cadena2.c_str());
      Image Imagen_filtrada;
      Imagen_filtrada=Image(Imagen_in.width,Imagen_in.height);
@@ -63,23 +60,26 @@ int main (){
      int b= Imagen_in.height;
      cout<<b<<endl;
    
+
          for(int i=0;i<Imagen_in.height;i++){
+
 
             for(int j=0;j<Imagen_in.width;j++){
 
                  x=i-1;
                  y=j-1;
 
+                
                  int k;
-                 int l;
-
-                 #pragma omp parallel for reduction (-:threads)//num_threads(threads)  
-
-                 for(int k=0;k<tamano;k++){                    
+                 #pragma omp parallel for reduction (+:threads) //num_threads(threads)  }
+                 for(k=0;k<tamano;k++){                    
                         
+                            //int l;
+                            //#pragma omp parallel for reduction (+:threads)
                             for(int l=0;l<tamano;l++){
                             nx=x+k;
-                            ny=y+l;
+                            ny=y+l; 
+
 
                             	if(nx >= 0 && ny >= 0 && nx < Imagen_in.height && ny < Imagen_in.width){
                             	acum_convx+=Imagen_in[nx][ny]*Gx[k][l];
