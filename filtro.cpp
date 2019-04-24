@@ -19,7 +19,7 @@ using namespace std;
 int main (){
                                                                                                                        
     Image Imagen_in;
-    string cadena="/home/giovanny/Digitales/tarea_digitales/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/Face.pgm";
+    string cadena="/home/giovanny/Digitales/tarea_digitales/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/lena.pgm";
     char *in_path = strdup(cadena.c_str());
     int bandera = Imagen_in.fromFile(in_path);
     int threads =4;
@@ -29,7 +29,7 @@ int main (){
          exit(1);
     }
 
-     string cadena2="/home/giovanny/Digitales/tarea_digitales/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/Face_filtrada.pgm";
+     string cadena2="/home/giovanny/Digitales/tarea_digitales/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/lena_filtrada.pgm";
      char *out_path= strdup(cadena2.c_str());
      Image Imagen_filtrada;
      Imagen_filtrada=Image(Imagen_in.width,Imagen_in.height);
