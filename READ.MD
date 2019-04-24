@@ -1,0 +1,1 @@
+En esta grafica se puede observar de manera clara, como los nucleos del pc influyen en el rendimiento del mismo,
