@@ -25,7 +25,7 @@ int main (){
     string cadena="/home/giovanny/Digitales/tarea_digitales/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/"+name+".pgm";
     char *in_path = strdup(cadena.c_str());
     int bandera = Imagen_in.fromFile(in_path);
-    int threads = 16;
+    int threads = 1;
 
      if(bandera==-1){
          cout<<"Error en la escritura de la imagen\n";
@@ -73,7 +73,7 @@ int main (){
                  int k;
                  int l;
 
-                 #pragma omp parallel for reduction (+:threads)//num_threads(threads)  
+                 #pragma omp parallel for reduction (-:threads)//num_threads(threads)  
 
                  for(int k=0;k<tamano;k++){                    
                         
