@@ -34,6 +34,8 @@ La imagen a filtrar se muestra a continuación.
 
 la tabla de datos obtenida del speedup teorico y el práctico se muestra a continuación. 
 
+![tabla.png](https://github.com/edwinibague/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/blob/master/tabla.png)
+
 
 La gráfica del speedup se muestra a continuación. 
 
