@@ -28,8 +28,9 @@ Posteriormente se realiza la paralelización de datos del procedimimiento median
 
 La imagen a filtrar se muestra a continuación. 
 
-![lena.pgm]
-(https://github.com/edwinibague/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/blob/master/lena.pgm)
+
+![lena.pgm](https://github.com/edwinibague/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/blob/master/lena.pgm)
+
 
 la tabla de datos obtenida del speedup teorico y el práctico se muestra a continuación. 
 
