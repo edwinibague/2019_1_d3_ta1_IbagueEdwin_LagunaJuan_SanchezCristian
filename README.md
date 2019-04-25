@@ -29,7 +29,7 @@ Posteriormente se realiza la paralelización de datos del procedimimiento median
 La imagen a filtrar se muestra a continuación. 
 
 ![lena.pgm]
-(https://github.com/edwinibague/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/tree/master/lena.pgm)
+(https://github.com/edwinibague/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/blob/master/lena.pgm)
 
 ## Conclusiones
 
@@ -37,3 +37,7 @@ Si el computador tienen solo 4 cores, no tiene sentido implementar mas de 4 hilo
 
 
 En ocaciones hay secciones de código que no vale la pena paralelizar, esto se debe a que dicha sección es muy rapida o sencilla y se invierte mas tiempo repartiendo la tarea que ejecutandola. 
+
+Para realizar el filtro de cualquier tipo de imagen, es necesario crear una matriz dinamica, ya que de lo contrario al querer filtras imagenes ajenas al proyecto, este no funcionará. 
+
+
