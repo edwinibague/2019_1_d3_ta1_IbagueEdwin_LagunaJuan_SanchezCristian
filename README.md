@@ -26,7 +26,10 @@ Posteriormente se realiza la paralelización de datos del procedimimiento median
 
 ## Resultados
 
-ñjui
+La imagen a filtrar se muestra a continuación. 
+
+![lena.pgm]
+(https://github.com/edwinibague/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/tree/master/lena.pgm)
 
 ## Conclusiones
 
