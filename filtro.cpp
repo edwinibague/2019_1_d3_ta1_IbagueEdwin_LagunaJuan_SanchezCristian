@@ -13,10 +13,16 @@
 #include <cmath>
 #include "image.h"
 #include <omp.h>
+#include <chrono>
+
 using namespace std;
+
 ///home/giovanny/Digitales/tarea_digitales/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/
+
 int main (){
-                                                                                                                       
+                
+    auto start = chrono::system_clock::now();
+
     Image Imagen_in;
     string cadena="/home/giovanny/Digitales/tarea_digitales/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/lena.pgm";
     char *in_path = strdup(cadena.c_str());
@@ -60,7 +66,6 @@ int main (){
      cout<<b<<endl;
    
 
-
          for(int i=0;i<Imagen_in.height;i++){
 
             for(int j=0;j<Imagen_in.width;j++){
@@ -68,12 +73,10 @@ int main (){
                  x=i-1;
                  y=j-1;
 
-                 //int k;
+                 
                  #pragma omp parallel for num_threads(threads) //reduction (+: threads)
                  for(int k=0;k<tamano;k++){                    
                         
-                            //int l;
-                            //#pragma omp parallel for num_threads(threads) //reduction (+:threads)//  // reduction (+:threads)
                             for(int l=0;l<tamano;l++){
                             nx=x+k;
                             ny=y+l; 
@@ -104,5 +107,11 @@ int main (){
 
      Imagen_filtrada.data=filt;
      bandera=Imagen_filtrada.toFile(out_path);
+
+
+
+auto end = chrono ::system_clock::now();
+std::chrono::duration<float,std::milli>duration = end - start;
+cout << "El tiempo de ejecución es:"<<duration.count()<<"milisegundos"<<endl;
 
 }
