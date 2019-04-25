@@ -13,17 +13,15 @@ Realizar la implementación paralela de una convolución 2D.
 
 ## Introducción
 
-La convolución es uno de los conceptos en el procesamiento de imagenes, el cual se refiere a las operaciones realizadas en señales para extraer datos significativos. 
-
-
-Se realizó un programa en c++ que permite leer una imagen de una ruta especifica del computador, para posteriormente aplicarle un filtro cd como mínimo 5x5, esto se hace a partir de convolución 2D.
-
+La convolución es uno de los conceptos más usados en el procesamiento de imagenes, el cual se refiere a las operaciones realizadas en señales para extraer datos significativos.  Los matemáticos usan técnicas de convolución para construir las señales de salida ante cualquier señal de entrada, para ello, hacen uso de la respuesta al impulso proporcionado por el sistema. 
 
 ## Procedimiento
 
 Se realizó un programa en c++ que permite leer una imagen de una ruta especifica del computador, para posteriormente aplicarle un filtro cd como mínimo 5x5, esto se hace a partir de convolución 2D.
 
-Posteriormente se realiza la paralelización de datos del procedimimiento mediante hilos, en este caso se usó open mp. 
+Posteriormente se realiza la paralelización de datos del procedimimiento mediante hilos, en este caso se usó open mp, lo cual quiere decir que es necesario utilizar #pragma omp parallel for para realizar la implementación. Además se estimó la seccion de código que es paralela y la sección que es secuencial, esto con el fin de calcular el speedup teórico asumiendo hasta 16 hilos para de esa manera hacer una comparación entre el speedup teórico y el real.
+
+ 
 
 
 ## Conclusiones
