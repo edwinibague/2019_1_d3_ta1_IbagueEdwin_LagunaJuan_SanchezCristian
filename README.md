@@ -39,6 +39,10 @@ la tabla de datos obtenida del speedup teorico y el práctico se muestra a conti
 
 La gráfica del speedup se muestra a continuación. 
 
+![speedup.png](https://github.com/edwinibague/2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian/blob/master/speedup.png)
+
+
+En esta imagen se aprecian dos curvas, la naranja es la ideal, es decir así se comporta el speedup de forma teórica. Por otra parte está la curva azul, la cual representa el speedup real que se satura a partir del sexto hilo, esto quiere decir que a partir de 6 hilos no se puede aumentar más la velocidad de ejecución del programa. 
 
 
 
