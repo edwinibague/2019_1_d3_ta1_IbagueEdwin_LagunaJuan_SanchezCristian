@@ -1,8 +1,6 @@
 # 2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian
 
 
-# 2019_1_d3_ta1_IbagueEdwin_LagunaJuan_SanchezCristian
-
 
 ## Resumen
 
@@ -24,8 +22,11 @@ Se realizó un programa en c++ que permite leer una imagen de una ruta especific
 
 Posteriormente se realiza la paralelización de datos del procedimimiento mediante hilos, en este caso se usó open mp, lo cual quiere decir que es necesario utilizar #pragma omp parallel for para realizar la implementación. Además se estimó la seccion de código que es paralela y la sección que es secuencial, esto con el fin de calcular el speedup teórico asumiendo hasta 16 hilos para de esa manera hacer una comparación entre el speedup teórico y el real.
 
- 
 
+
+## Resultados
+
+ñjui
 
 ## Conclusiones
 
